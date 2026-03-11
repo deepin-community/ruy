@@ -1,5 +1,25 @@
-template-repository (1.0-1) unstable; urgency=medium
+ruy (0.0.0~git20230215.21a85fe-3) unstable; urgency=medium
+
+  * Cherry-pick upstream patch removing -Wc++14-compat (Closes: #1114362)
+  * Update debian/copyright
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 15 Sep 2025 12:02:18 +0200
+
+ruy (0.0.0~git20230215.21a85fe-2) unstable; urgency=medium
+
+  [ Bardia Moshiri ]
+  * debian: build with position independent code
+
+  [ Dylan Aïssi ]
+  * Add debian/upstream/metadata
+  * Standards-Version: 4.7.2 (no changes required)
+  * Ignore test results for ARM32 (Closes: #1067958)
+  * Mark libruy-dev as Multi-Arch: same
+
+ -- Dylan Aïssi <daissi@debian.org>  Sun, 06 Apr 2025 17:58:05 +0200
+
+ruy (0.0.0~git20230215.21a85fe-1) unstable; urgency=medium
 
   * Initial release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Dylan Aïssi <daissi@debian.org>  Sat, 17 Jun 2023 22:14:16 +0200
