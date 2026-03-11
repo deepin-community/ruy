@@ -2,3 +2,17 @@
 
 %:
 	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DRUY_FIND_CPUINFO=ON \
+		-DCMAKE_POSITION_INDEPENDENT_CODE=ON
+
+override_dh_auto_test:
+# Ignore test results for ARM32
+ifneq (,$(filter $(DEB_HOST_ARCH), armel armhf))
+	-dh_auto_test
+else
+	dh_auto_test
+endif
